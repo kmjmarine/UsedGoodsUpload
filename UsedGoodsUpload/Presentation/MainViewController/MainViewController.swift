@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-class MainViewConttoller: UIViewController {
+final class MainViewConttoller: UIViewController {
     let dispposeBag = DisposeBag()
     
     let tableView = UITableView()
@@ -43,6 +43,8 @@ class MainViewConttoller: UIViewController {
         tableView.backgroundColor = .white
         tableView.separatorStyle = .singleLine
         tableView.tableFooterView = UIView()
+        
+        tableView.register(TitleTextFieldCell.self, forCellReuseIdentifier: "TitleTextFieldCell") //index row 0
     }
     
     private func layout() {

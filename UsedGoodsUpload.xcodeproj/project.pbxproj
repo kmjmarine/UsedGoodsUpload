@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E519165A27EF02FF000BCC54 /* TitleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519165927EF02FF000BCC54 /* TitleTextFieldCell.swift */; };
 		E519165C27EF034C000BCC54 /* TitleTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519165B27EF034C000BCC54 /* TitleTextFieldViewModel.swift */; };
+		E519165F27EF0D9F000BCC54 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519165E27EF0D9F000BCC54 /* Category.swift */; };
+		E519166327EF0E5D000BCC54 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519166227EF0E5D000BCC54 /* CategoryViewModel.swift */; };
+		E519166527EF1094000BCC54 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519166427EF1094000BCC54 /* CategoryListViewController.swift */; };
 		E51F1EE527ECCB7400D38275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51F1EE427ECCB7400D38275 /* AppDelegate.swift */; };
 		E51F1EE727ECCB7400D38275 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51F1EE627ECCB7400D38275 /* SceneDelegate.swift */; };
 		E51F1EEE27ECCB7500D38275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E51F1EED27ECCB7500D38275 /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		E519165927EF02FF000BCC54 /* TitleTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCell.swift; sourceTree = "<group>"; };
 		E519165B27EF034C000BCC54 /* TitleTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldViewModel.swift; sourceTree = "<group>"; };
+		E519165E27EF0D9F000BCC54 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E519166227EF0E5D000BCC54 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		E519166427EF1094000BCC54 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		E51F1EE127ECCB7400D38275 /* UsedGoodsUpload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsedGoodsUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51F1EE427ECCB7400D38275 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E51F1EE627ECCB7400D38275 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +59,8 @@
 				E51F1EFE27ECCBD100D38275 /* MainViewController.swift */,
 				E51F1F0327ECCCF500D38275 /* MainViewModel.swift */,
 				E519165D27EF035B000BCC54 /* TitleTextFieldCell */,
+				E519166227EF0E5D000BCC54 /* CategoryViewModel.swift */,
+				E519166427EF1094000BCC54 /* CategoryListViewController.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -64,6 +72,22 @@
 				E519165B27EF034C000BCC54 /* TitleTextFieldViewModel.swift */,
 			);
 			path = TitleTextFieldCell;
+			sourceTree = "<group>";
+		};
+		E519166027EF0DA4000BCC54 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E519165E27EF0D9F000BCC54 /* Category.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E519166127EF0E0A000BCC54 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E519165827EF02DD000BCC54 /* MainViewController */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		E51F1ED827ECCB7400D38275 = {
@@ -88,7 +112,8 @@
 			children = (
 				E51F1EE427ECCB7400D38275 /* AppDelegate.swift */,
 				E51F1EE627ECCB7400D38275 /* SceneDelegate.swift */,
-				E519165827EF02DD000BCC54 /* MainViewController */,
+				E519166027EF0DA4000BCC54 /* Entity */,
+				E519166127EF0E0A000BCC54 /* Presentation */,
 				E51F1EED27ECCB7500D38275 /* Assets.xcassets */,
 				E51F1EEF27ECCB7500D38275 /* LaunchScreen.storyboard */,
 				E51F1EF227ECCB7500D38275 /* Info.plist */,
@@ -184,10 +209,13 @@
 			files = (
 				E51F1EE527ECCB7400D38275 /* AppDelegate.swift in Sources */,
 				E51F1EE727ECCB7400D38275 /* SceneDelegate.swift in Sources */,
+				E519166527EF1094000BCC54 /* CategoryListViewController.swift in Sources */,
 				E51F1EFF27ECCBD100D38275 /* MainViewController.swift in Sources */,
 				E519165C27EF034C000BCC54 /* TitleTextFieldViewModel.swift in Sources */,
+				E519166327EF0E5D000BCC54 /* CategoryViewModel.swift in Sources */,
 				E519165A27EF02FF000BCC54 /* TitleTextFieldCell.swift in Sources */,
 				E51F1F0427ECCCF500D38275 /* MainViewModel.swift in Sources */,
+				E519165F27EF0D9F000BCC54 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
