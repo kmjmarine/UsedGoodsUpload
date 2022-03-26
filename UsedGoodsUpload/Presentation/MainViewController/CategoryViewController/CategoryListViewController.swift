@@ -32,13 +32,34 @@ final class CategoryListViewController: UIViewController {
                 cell.textLabel?.text = data.name
                 return cell
             }
+            .disposed(by: disposeBag)
+        
+        viewModel.pop
+            .emit(onNext: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .map { $0.row }
+            .bind(to: viewModel.itemSelected)
+            .disposed(by: disposeBag)
     }
     
     private func attribute() {
+        view.backgroundColor = .systemBackground
         
+        tableView.backgroundColor = .white
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CaterogyListCell")
+        tableView.separatorStyle = .singleLine
+        tableView.tableFooterView = UIView()
     }
     
     private func layout() {
+        view.addSubview(tableView)
         
+        tableView.snp.makeConstraints { 
+            $0.edges.equalToSuperview()
+        }
     }
 }
